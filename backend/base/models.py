@@ -11,3 +11,6 @@ class Product(models.Model):
     # image = need to set up file upload system
     _id = models.AutoField(primary_key=True, editable=False)
     description = models.TextField(null=True, blank=True)
+    brand = models.CharField(max_length=200, null=True, blank=True)
+    countInStock = models.IntegerField(null=True, blank=True, default=0)
+    category = models.CharField(max_length=200, null=True, blank=True)
