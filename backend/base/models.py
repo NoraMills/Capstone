@@ -70,7 +70,7 @@ class ShippingAddress(models.Model):
         return str(self.adress)
 
 
-class PaintQuality(models.model):
+class PaintQuality(models.Model):
     quality = models.CharField(max_length=200, null=True, blank=True)
     name = models.CharField(max_length=200, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
