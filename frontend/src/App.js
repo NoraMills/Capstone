@@ -1,19 +1,25 @@
 import logo from './logo.svg';
 
 import { Container } from 'react-bootstrap'
-import Header from './components/Header'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Header from './components/Header';
 import Footer from './components/Footer';
+import HomeScreen from './components/screens/HomeScreen';
+import ProductScreen from './components/screens/ProductScreen';
 
 function App() {
   return (
     <div>
-      <Header />
-      <main className='py-3'>
-        <Container>
-          <h1>My app thing</h1>
-        </Container>
-      </main>
-      <Footer />
+      <Router>
+        <Header />
+          <main className='py-3'>
+            <Container>
+              <Route path='/' component={HomeScreen} exact />
+              <Route path='/product/:id' component={ProductScreen} />
+            </Container>
+          </main>
+        <Footer />
+      </Router>
     </div>
   );
 }
