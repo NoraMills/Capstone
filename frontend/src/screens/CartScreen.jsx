@@ -6,6 +6,7 @@ import Message from '../components/Message';
 import { addToCart } from '../actions/cartActions';
 
 
+
 function CartScreen({ match, location, history }) {
     const productId = match.params.id
     const qty = location.search? Number(location.search.split('=')[1]) : 1
@@ -23,6 +24,10 @@ function CartScreen({ match, location, history }) {
 
     const removeFromCartHandler = (id) => {
         console.log('remove:', id)
+    }
+
+    const checkoutHandler = () => {
+        history.push('/login?redirect=shipping')
     }
 
     return (
@@ -85,6 +90,16 @@ function CartScreen({ match, location, history }) {
                             ${cartItems.reduce((acc, item) => acc+ item.qty * item.price, 0).toFixed(2)}
                         </ListGroup.Item>
                     </ListGroup>
+                    <ListGroup.Item>
+                        <Button
+                            type='button'
+                            className='btn-block'
+                            disabled={cartItems.length === 0}
+                            onClick={checkoutHandler}
+                        >
+                                Checkout
+                        </Button>
+                    </ListGroup.Item>
                 </Card>
             </Col>
         </Row>
