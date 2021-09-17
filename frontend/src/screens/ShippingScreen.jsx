@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { Form, Button } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useState, useEffect } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import store from '../store';
-import FormContainer from '../components/FormContainer'
+import FormContainer from '../components/FormContainer';
+import CheckoutSteps from '../components/CheckoutSteps';
 
 import { saveShippingAddress } from '../actions/cartActions'
 
@@ -26,6 +27,7 @@ function ShippingScreen({ history }) {
 
     return (
         <FormContainer>
+            <CheckoutSteps step1 step2 />
             <h2>Shipping Information</h2>
             <p>Please enter the address your order should be shipped to.</p>
             <Form onSubmit={submitHandler}>
@@ -78,7 +80,7 @@ function ShippingScreen({ history }) {
                     </Form.Control>
                 </Form.Group>
 
-                <Button type='submit' variant='primary'>
+                <Button className='mt-2'type='submit' variant='primary'>
                     Continue
                 </Button>
             </Form>
