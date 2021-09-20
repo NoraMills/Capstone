@@ -27,7 +27,7 @@ function ShippingScreen({ history }) {
 
     return (
         <FormContainer>
-            <CheckoutSteps step1 step2 />
+            <CheckoutSteps step1 step2  />
             <h2>Shipping Information</h2>
             <p>Please enter the address your order should be shipped to.</p>
             <Form onSubmit={submitHandler}>
