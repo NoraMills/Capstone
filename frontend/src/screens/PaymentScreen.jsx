@@ -42,6 +42,16 @@ function PaymentScreen({ history }) {
                         >
 
                         </Form.Check>
+                        <Form.Check disabled
+                            type='radio'
+                            label='Other Method'
+                            id='other'
+                            name='paymentMethod'
+                            checked
+                            onChange={(e) => setPaymentMethod(e.target.value)}
+                        >
+
+                        </Form.Check>
                     </Col>
                 </Form.Group>
 

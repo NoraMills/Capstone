@@ -15,6 +15,7 @@ class Product(models.Model):
     brand = models.CharField(max_length=200, null=True, blank=True)
     countInStock = models.IntegerField(null=True, blank=True, default=0)
     category = models.CharField(max_length=200, null=True, blank=True)
+    createdAt = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name

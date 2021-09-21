@@ -83,6 +83,20 @@ function ProductScreen({ match, history }) {
                                                     </Form.Control>
                                                 </Col>
                                             </Row>
+
+                                            <Row>
+                                                <Col>Color</Col>
+                                                <Col xs='auto' className='my-1'>
+                                                    <Form.Control disabled
+                                                        as="select"
+                                                        // the value selection needs to be added. qty is a placeholder
+                                                        value={qty}
+                                                        >
+                                                        
+
+                                                    </Form.Control>
+                                                </Col>
+                                            </Row>
                                         </ListGroup.Item>
                                     )}
 
