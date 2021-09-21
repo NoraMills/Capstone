@@ -8,6 +8,8 @@ import { listProductDetails } from '../actions/productActions'
 
 function ProductScreen({ match, history }) {
     const [qty, setQty] = useState(1)
+    // const colorScheme
+    // const paintStandard
     const dispatch = useDispatch()
     const productDetails = useSelector(state => state.productDetails)
     const { loading, error, product } = productDetails 
@@ -86,6 +88,19 @@ function ProductScreen({ match, history }) {
 
                                             <Row>
                                                 <Col>Color</Col>
+                                                <Col xs='auto' className='my-1'>
+                                                    <Form.Control disabled
+                                                        as="select"
+                                                        // the value selection needs to be added. qty is a placeholder
+                                                        value={qty}
+                                                        >
+                                                        
+
+                                                    </Form.Control>
+                                                </Col>
+                                            </Row>
+                                            <Row>
+                                                <Col>Standard</Col>
                                                 <Col xs='auto' className='my-1'>
                                                     <Form.Control disabled
                                                         as="select"
