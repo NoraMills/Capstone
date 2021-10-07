@@ -1,7 +1,9 @@
 <div align="center">
 <img src="https://rishavanand.github.io/static/images/greetings.gif" align="center" style="width: 100%" />
 </div>  
-  
+To run this: <br>
+-npm -i
+-uses Django backend (url found in 
 
 ### <div align="center">I'm Nora. I recently completed the devCodeCamp Full Stack bootcamp</div>  
   
